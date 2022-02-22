@@ -46,8 +46,6 @@ joke_button.pack()
 label_joke = tkinter.Label(window, text="")
 label_joke.pack()
 
-
-
 reset_button = tkinter.Button(window, text="Reset", command=reset, state="disabled")
 reset_button.pack()
 
