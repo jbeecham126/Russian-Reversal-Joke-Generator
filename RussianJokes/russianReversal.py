@@ -18,7 +18,7 @@ def joke():
     joke_button["state"] = "disabled"
 
     # Returns Joke
-    label_joke["text"] = "In America, you {0} {1}. In Soviet Russia, {1} {0} you.".format(verb, noun)
+    label_joke["text"] = f"In America, you {verb} {noun}. In Soviet Russia, {noun} {verb} you."
 
 def reset():
     reset_button["state"] = "disabled"
