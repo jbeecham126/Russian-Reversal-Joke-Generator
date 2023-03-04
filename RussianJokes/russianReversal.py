@@ -8,24 +8,25 @@ window = tkinter.Tk()
 window.title("Russian Reversal Joke Generator")
 window.geometry("500x500")
 
-def joke():
+def create_joke():
     # Gets User Input
     noun = noun_entry.get()
     verb = verb_entry.get()
 
     # Button States
-    reset_button["state"] = "normal"
-    joke_button["state"] = "disabled"
+    reset_button.configure(state="normal")
+    joke_button.configure(state="disabled")
 
-    # Returns Joke
-    label_joke["text"] = f"In America, you {verb} {noun}. In Soviet Russia, {noun} {verb} you."
+    # Creates Joke
+    joke = f"In America, you {verb} {noun}. In Soviet Russia, {noun} {verb} you."
+    label_joke.configure(text=joke)
 
 def reset():
-    reset_button["state"] = "disabled"
-    joke_button["state"] = "normal"
-    label_joke["text"] = ""
-    noun_entry.delete(0, "end")
-    verb_entry.delete(0, "end")
+    reset_button.configure(state="disabled")
+    joke_button.configure(state="normal")
+    label_joke.configure(text="")
+    noun_entry.delete(0, tkinter.END)
+    verb_entry.delete(0, tkinter.END)
 
 # Fun Stuff
 enter_noun = tkinter.Label(window, text="Enter a noun:")
@@ -40,7 +41,7 @@ enter_verb.pack()
 verb_entry = tkinter.Entry(window)
 verb_entry.pack()
 
-joke_button = tkinter.Button(window, text="Create Joke", command=joke)
+joke_button = tkinter.Button(window, text="Create Joke", command=create_joke)
 joke_button.pack()
 
 label_joke = tkinter.Label(window, text="")
