@@ -5,5 +5,7 @@
 noun = input("Enter a noun: ")
 verb = input("Enter a verb: ")
 
-print("In America, you " + verb + " " + noun + ",")
-print("In Soviet Russia, " + noun + " " + verb + " you.")
+print(
+    f"In America, you {verb} {noun}.\n"
+    f"In Soviet Russia, {noun} {verb} you."
+)
